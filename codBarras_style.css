@@ -1,0 +1,66 @@
+body {
+    background-color:#95a5a6;
+    /*background-image:url("../images/bg.jpg");	*/
+}
+header{
+    text-align: center;
+    font-family: 'Helvética','Arial';
+}
+section {
+    background-color: #bdc3c7;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.301);
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    }
+.boxInteracao{
+    background-color: #ecf0f1;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text-input{
+    width:400px;
+}
+
+.subtitulo{
+    line-height: 0px;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+#BtLimpaHistorico {
+    margin: 5px;
+}
+
+#inforHistorico{
+    color: red;
+    text-align: center;
+    font-style: oblique italic;
+    margin: 5px;
+}
+
+.exibeValue {
+    margin-top: 2px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#blockReferencia {
+    font-size: 35px;
+    margin: 5px;
+}
