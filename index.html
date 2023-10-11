@@ -9,68 +9,108 @@
     </head>
     <body>
         <header>
-            <h1>TESTE DE QUALIDADE DOS CÓDIGO DE BARRAS</h1>
+            <div class="title">
+                <h1>Teste de qualidade dos códigos de barras</h1>
+            </div>
         </header>
         <section>
-            <div id="CodBarReferencia" class = "boxInteracao">
-                <h3 class="subtitulo">CÓDIGO DE REFERÊNCIA</h3>
-                <h2 class="exibeValue">
-                    <a id="exibeCodBarrasReferencia"class="exibeValue"></a> <button id="blockReferencia" onclick="blockCodBarrasReferencia()">&#x1F513;</button>
-                </h2>
-                <input type="text" name="inputCodBarrasReferencia" id="inputCodBarrasReferencia" class="text-input" onchange="codBarrasReferencia()" placeholder="DIGITAR O CÓDIGO DE BARRAS DE REFERÊNCIA AQUI">
-            </div>
+            <div class="container">
 
-            <div id="campoTestes" class = "boxInteracao">
-                <h3 class="subtitulo">ÁREA PARA TESTES</h3>
-                <h2 class="exibeValue">
-                    <p id="valorLido" class="exibeValue"></p>
-                </h2>
-                <input type="text" name="inputTestes" id="inputTestes" class="text-input" onchange="testeCodBar()" placeholder="TESTAR OS CÓDIGO DE BARRAS AQUI">
-            </div>
-            <div id="CodHistorico" class = "boxInteracao">
-                <h3>HISTÓRICO DE LEITURA</h3>
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Código Lido</th>
-                        <th>Data e Hora</th>
-                    </tr>
-                    <tr>
-                        <td>TESTE 05:</td>
-                        <td id="t05Value"></td>
-                        <td id="t05DateTime"></td>
-                    </tr>
-                    <tr>
-                        <td>TESTE 04:</td>
-                        <td id="t04Value"></td>
-                        <td id="t04DateTime"></td>
-                    </tr>
-                    <tr>
-                        <td>TESTE 03:</td>
-                        <td id="t03Value"></td>
-                        <td id="t03DateTime"></td>
-                    </tr>
-                    <tr>
-                        <td>TESTE 02:</td>
-                        <td id="t02Value"></td>
-                        <td id="t02DateTime"></td>
-                    </tr>
-                    <tr>
-                        <td>TESTE 01:</td>
-                        <td id="t01Value"></td>
-                        <td id="t01DateTime"></td>
-                    </tr>
-                </table>
-                <h5 id="inforHistorico">
-                    <p>ATENÇÃO! Nenhum desses dados no histórico estão sendo salvos.<br>
-                    Ao reniciar a página ou pressionar o botão Limpar Histórico, as informações serão perdidas.</p>
-                </h5>
-                <button id="BtLimpaHistorico" onclick="limpaHistorico()">Limpar Histórico</button>
+                <div class = "interaction-box">
+
+                    <div class="subtitle">
+                        <h2>Código de Referência</h2>
+                    </div>
+
+                    <div class="display-values">
+                        <a id="exibeCodBarrasReferencia">0123456789</a>
+                        <button id="button-lock-reference" onclick="blockCodBarrasReferencia()">&#x1F513;</button>
+                    </div>
+                    
+                    <div class="input-codbar">
+                        <input type="text" name="inputCodBarrasReferencia" id="inputCodBarrasReferencia" class="text-input" onchange="codBarrasReferencia()" placeholder="DIGITAR O CÓDIGO DE BARRAS DE REFERÊNCIA AQUI">
+                    </div>
+                    
+                </div>
+
+                <div class="interaction-box">
+
+                    <div class="subtitle">
+                        <h2>Área de Testes</h2>
+                    </div>
+
+                    <div class="display-values">
+                        <a id="valorLido" class="exibeValue">0123456</a>
+                    </div>
+
+                    <div class="input-codbar">
+                        <input type="text" name="inputTestes" id="inputTestes" onchange="testeCodBar()" placeholder="TESTAR OS CÓDIGO DE BARRAS AQUI">
+                    </div>
+
+                </div>
+
+                <div class="display-history-data">
+                    <div class="subtitle">
+                        <h2>Histórico de Leitura</h2>
+                    </div>
+
+                    <div class="display-values-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Data/Hora</th>
+                                    <th>Código Lido</th>
+                                    <th>Aprovado?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="t05DateTime">01/01/00 14:14</td>
+                                    <td id="t05Value" class="data-value">1234567890</td>
+                                    <td class="tbl-simbol">&#X2705</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td id="t04DateTime">01/01/00 14:14</td>
+                                    <td id="t04Value" class="data-value">1234567890</td>
+                                    <td class="tbl-simbol">&#X2705</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td id="t03DateTime">01/01/00 14:14</td>
+                                    <td id="t03Value" class="data-value">1234567890</td>
+                                    <td class="data-simbol">&#X274C</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td id="t02DateTime">01/01/00 14:14</td>
+                                    <td id="t02Value" class="data-value">1234567890</td>
+                                    <td class="tbl-simbol">&#X274C</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td id="t01DateTime">01/01/00 14:14</td>
+                                    <td id="t01Value" class="data-value">1234567890</td>
+                                    <td class="tbl-simbol">&#X2705</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+
+                    <div class="display-history-alert">
+                        <p>ATENÇÃO! Nenhum desses dados no histórico estão sendo salvos.</p>
+                        <p>Ao reniciar a página ou pressionar o botão Limpar Histórico, as informações serão perdidas.</p>
+                    </div>
+                    
+                    <button id="button-clear-history" onclick="limpaHistorico()">Limpar Histórico</button>                    
+                    
+                </div>
             </div>
         </section>
     
         <footer>
-            Ygor Seixas - 2021
+            Ygor Seixas - 2023
         </footer>
 
         
