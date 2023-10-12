@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Teste Codigo de Barras</title>
-        <link rel="stylesheet" href="codBarras_style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
         <header>
@@ -23,12 +23,12 @@
                     </div>
 
                     <div class="display-values">
-                        <a id="exibeCodBarrasReferencia">0123456789</a>
+                        <a id="display-reference-barcode">0123456789</a>
                         <button id="button-lock-reference" onclick="blockCodBarrasReferencia()">&#x1F513;</button>
                     </div>
                     
                     <div class="input-codbar">
-                        <input type="text" name="inputCodBarrasReferencia" id="inputCodBarrasReferencia" class="text-input" onchange="codBarrasReferencia()" placeholder="DIGITAR O CÓDIGO DE BARRAS DE REFERÊNCIA AQUI">
+                        <input type="text" name="input-reference-barcode" id="input-reference-barcode" placeholder="DIGITAR O CÓDIGO DE BARRAS DE REFERÊNCIA AQUI">
                     </div>
                     
                 </div>
@@ -38,13 +38,13 @@
                     <div class="subtitle">
                         <h2>Área de Testes</h2>
                     </div>
-
+                    
                     <div class="display-values">
-                        <a id="valorLido" class="exibeValue">0123456</a>
+                        <a id="test-display-value">0123456</a>
                     </div>
 
                     <div class="input-codbar">
-                        <input type="text" name="inputTestes" id="inputTestes" onchange="testeCodBar()" placeholder="TESTAR OS CÓDIGO DE BARRAS AQUI">
+                        <input type="text" name="test-input" id="test-input"  placeholder="TESTAR OS CÓDIGO DE BARRAS AQUI">
                     </div>
 
                 </div>
@@ -114,7 +114,7 @@
         </footer>
 
         
-        <script src="codBarrasV2_script.js"></script>
+        <script src="assets/js/script.js"></script>
     </body>
     
 </html>
